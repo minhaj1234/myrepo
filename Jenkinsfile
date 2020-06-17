@@ -12,7 +12,7 @@ pipeline {
                 sh "node --max_old_space_size=4098 ./node_modules/@angular/cli/bin/ng build --project core"
                 sh "node --max_old_space_size=4098 ./node_modules/@angular/cli/bin/ng build --project user-management"
                 sh "node --max_old_space_size=4098 ./node_modules/@angular/cli/bin/ng build --project modeler"
-            build job: 'demo-dfm-service', propagate: true, wait: true
+            build job: 'demo-dfm-service-scm', propagate: true, wait: true
 
             }
         }
